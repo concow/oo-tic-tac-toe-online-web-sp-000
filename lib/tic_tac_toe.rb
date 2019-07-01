@@ -67,8 +67,7 @@ def current_player
   turn_count % 2 == 0 ? "X" : "O"    #call #turn_count. Ternary operators ? : looks for true/false values then executes
 end                                         #using a modulo. if condition is true ? then "X" : otherwise value "O"
 
-def won?     #check the board return true if win, false if not
-
+def won?     
   WIN_COMBINATIONS.detect do |win_combo|
     if (@board[win_combo[0]]) == "X" && (@board[win_combo[1]]) == "X" && (@board[win_combo[2]]) == "X"
       return win_combo
