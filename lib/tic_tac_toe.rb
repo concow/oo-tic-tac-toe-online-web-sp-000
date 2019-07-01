@@ -64,7 +64,7 @@ def turn_count
 end                                      #This return could also be just: turns. However including 'returns' helps understanding
 
 def current_player
-  turn_count % 2 == 0 ? "X" : "O"    #call #turn_count. Ternary operators ? : looks for true/false values then executes
+  turn_count % 2 == 0 ? "X" : "O"           #call #turn_count. Ternary operators ? : looks for true/false values then executes
 end                                         #using a modulo. if condition is true ? then "X" : otherwise value "O"
 
 def won?
