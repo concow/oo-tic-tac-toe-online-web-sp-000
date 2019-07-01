@@ -101,7 +101,6 @@ def winner
       nil
     end
   end
-
 end
 
 def play
