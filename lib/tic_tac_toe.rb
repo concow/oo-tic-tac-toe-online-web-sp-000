@@ -11,7 +11,7 @@ WIN_COMBINATIONS = [
   [1,4,7],
   [2,5,8],
 ]
-def initialize(board = nil)     #default parameter set to nil if board is empty
+def initialize(board = nil)                  #default parameter set to nil if board is empty
   @board = board || Array.new(9, " ")       #instance var equal to argument, init array to 9 empty spaces
 
 end
@@ -67,7 +67,7 @@ def current_player
   turn_count % 2 == 0 ? "X" : "O"    #call #turn_count. Ternary operators ? : looks for true/false values then executes
 end                                         #using a modulo. if condition is true ? then "X" : otherwise value "O"
 
-def won?     
+def won?
   WIN_COMBINATIONS.detect do |win_combo|
     if (@board[win_combo[0]]) == "X" && (@board[win_combo[1]]) == "X" && (@board[win_combo[2]]) == "X"
       return win_combo
